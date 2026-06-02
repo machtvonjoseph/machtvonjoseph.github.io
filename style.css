@@ -346,6 +346,12 @@ a:hover { text-decoration: underline; }
 
 .slide-caption { text-align: center; margin-top: .7rem; font-family: var(--font-sans); font-size: .9rem; color: var(--text-muted); min-height: 1.2em; }
 
+/* Books — plain cover images */
+.books { display: flex; flex-wrap: wrap; gap: 1.6rem; justify-content: center; }
+.book { width: 180px; margin: 0; text-align: center; }
+.book img { width: 100%; height: auto; border-radius: 6px; box-shadow: var(--shadow); display: block; }
+.book figcaption { margin-top: .6rem; font-family: var(--font-sans); font-size: .82rem; color: var(--text-muted); line-height: 1.4; }
+
 /* Footer */
 .footer {
   border-top: 1px solid var(--border); background: var(--bg-alt);
