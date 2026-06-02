@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Kidus Workneh</title>
+  <meta name="description" content="Past research projects by Kidus Workneh: Sequestered Encryption, VIP-Bench, A Midsummer Night's Tree, Baobab Merkle Tree, and Leroy." />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ─────────── Nav ─────────── -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kidus Workneh</a>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="blog.html">Blog</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="CV_Resume/KidusCV1_6_26.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.1" y1="5.1" x2="6.9" y2="6.9"/><line x1="17.1" y1="17.1" x2="18.9" y2="18.9"/><line x1="5.1" y1="18.9" x2="6.9" y2="17.1"/><line x1="17.1" y1="6.9" x2="18.9" y2="5.1"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ─────────── Page header (dark) ─────────── -->
+  <section class="page-hero">
+    <canvas id="hero-bg" class="hero-bg" aria-hidden="true"></canvas>
+    <div class="page-hero-inner">
+      <h1 class="page-title">Research</h1>
+      <p class="page-sub">languages, compilers, and hardware</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section">
+      <p>
+        My current research bridges <strong>programming languages</strong>, <strong>compilers</strong>, and
+        <strong>computer architecture</strong> — co-designing the whole stack so that programs use
+        increasingly heterogeneous hardware <em>efficiently</em>, <em>reliably</em>, and <em>securely</em>,
+        without pushing that complexity onto developers. 
+      </p>
+
+      </p>
+       My past projects explore diverse memory technologies—such as secure memory and non-volatile main memory to enable privacy-enhanced computation and efficient security metadata management. Additionally, I have worked on library learning for imperative programming languages. You can find more details about these projects below, or browse <a href="index.html#publications">my full list of publications</a>.
+      </p>
+
+      <h2 class="section-title" style="margin-top:2rem;">Past Research Projects</h2>
+      <div class="cards">
+
+
+        <!-- Leroy -->
+        <article class="card project-card">
+          <div class="proj-head">
+            <div>
+              <h3>Leroy</h3>
+              <span class="proj-venue">ACM SIGPLAN HATRA · 2024</span>
+            </div>
+            <a class="pdf-link" href="papers/leroy.pdf" target="_blank" rel="noopener" aria-label="Open the Leroy PDF">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V7h3.5L13 3.5zM7.5 12.5h9V14h-9v-1.5zm0 3h9V17h-9v-1.5zm0-6h4V11h-4V9.5z"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="proj-summary">Automatically finding the reusable helper functions hiding in a codebase. Leroy spots repeated patterns in ordinary imperative programs (like Python) and turns them into shared library functions, making code smaller and easier to maintain.</p>
+          <div class="proj-actions">
+            <button class="abstract-btn" type="button">Abstract</button>
+          </div>
+          <div class="abstract-src" hidden>
+            <h4>Leroy: Library Learning for Imperative Programming Languages</h4>
+            <p>Library learning is the process of building a library of common functionalities from a given set of programs. Typically, this process is applied in the context of aiding program synthesis: concise functions can help the synthesizer produce modularized code that is smaller in size. Previous work has focused on functional Lisp-like languages, as their regularity makes them more amenable to extracting repetitive structures. Our work introduces Leroy, which extends existing library learning techniques to imperative higher-level programming languages, with the goal of facilitating reusability and ease of maintenance. Leroy wraps the existing Stitch framework for library learning and converts imperative programs into a Lisp-like format using the AST. Our solution uses Stitch to do a top-down, corpus-guided extraction of repetitive expressions. Further, we prune abstractions that cannot be implemented in the programming language and convert the best abstractions back to the original language. We implement our technique in a tool for a subset of the Python programming language and evaluate it on a large corpus of programs. Leroy achieves a compression ratio of 1.04x of the original code base, with a slight expansion when the library is included. Additionally, we show that our technique prunes invalid abstractions.</p>
+          </div>
+        </article>
+
+        <!-- A Midsummer Night's Tree -->
+        <article class="card project-card">
+          <div class="proj-head">
+            <div>
+              <h3>A Midsummer Night's Tree</h3>
+              <span class="proj-venue">ACM ASPLOS · 2024</span>
+            </div>
+            <a class="pdf-link" href="papers/amnt.pdf" target="_blank" rel="noopener" aria-label="Open the A Midsummer Night's Tree PDF">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V7h3.5L13 3.5zM7.5 12.5h9V14h-9v-1.5zm0 3h9V17h-9v-1.5zm0-6h4V11h-4V9.5z"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="proj-summary">Making secure non-volatile memory both fast and chip-frugal. By nesting a small "tree within a tree" for the integrity bookkeeping, it survives power loss, cuts runtime cost by ~41%, and uses far less precious on-chip space than prior designs.</p>
+          <div class="proj-actions">
+            <button class="abstract-btn" type="button">Abstract</button>
+          </div>
+          <div class="abstract-src" hidden>
+            <h4>A Midsummer Night's Tree: Efficient and High Performance Secure SCM</h4>
+            <p>Secure memory is a highly desirable property to prevent memory corruption-based attacks. The emergence of non-volatile, storage class memory (SCM) devices presents new challenges for secure memory. Metadata for integrity verification, organized in a Bonsai Merkle Tree (BMT), is cached on-chip in volatile caches, and may be lost on a power failure. As a consequence, care is required to ensure that metadata updates are always propagated into SCM. To optimize metadata updates, state-of-the-art approaches propose lazy update crash consistent metadata schemes. However, few consider the implications of their optimizations on on-chip area, which leads to inefficient utilization of scarce on-chip space. In this paper, we propose A Midsummer Night's Tree (AMNT), a novel "tree within a tree" approach to provide crash consistent integrity with low run-time overhead while limiting on-chip area for security metadata. Our approach offloads the potential hardware complexity of our technique to software to keep area overheads low. Our proposed mechanism results in significant improvements (a 41% reduction in execution overhead on average versus the state-of-the-art) for in-memory storage applications while significantly reducing the required on-chip area to implement our protocol.</p>
+          </div>
+        </article>
+
+        <!-- Baobab Merkle Tree -->
+        <article class="card project-card">
+          <div class="proj-head">
+            <div>
+              <h3>Baobab Merkle Tree</h3>
+              <span class="proj-venue">IEEE CAL · 2024</span>
+            </div>
+            <a class="pdf-link" href="papers/Baobab_Merkle_Tree_for_Efficient_Secure_Memory.pdf" target="_blank" rel="noopener" aria-label="Open the Baobab Merkle Tree PDF">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V7h3.5L13 3.5zM7.5 12.5h9V14h-9v-1.5zm0 3h9V17h-9v-1.5zm0-6h4V11h-4V9.5z"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="proj-summary">Secure memory needs a lot of bookkeeping that wastes space. Baobab remembers (memoizes) frequently repeated counters in a small on-chip table, shrinking that storage overhead by 2–4× — with no performance penalty.</p>
+          <div class="proj-actions">
+            <button class="abstract-btn" type="button">Abstract</button>
+          </div>
+          <div class="abstract-src" hidden>
+            <h4>Baobab Merkle Tree for Efficient Secure Memory</h4>
+            <p>Secure memory is a natural solution to hardware vulnerabilities in memory, but it faces fundamental challenges of performance and memory overheads. While significant work has gone into optimizing the protocol for performance, far less work has gone into optimizing its memory overhead. In this work, we propose the Baobab Merkle Tree, in which counters are memoized in an on-chip table. The Baobab Merkle Tree reduces spatial overhead of a Bonsai Merkle Tree by 2-4X without incurring performance overhead.</p>
+          </div>
+        </article>
+
+        <!-- Sequestered Encryption -->
+        <article class="card project-card">
+          <div class="proj-head">
+            <div>
+              <h3>Sequestered Encryption</h3>
+              <span class="proj-venue">IEEE SEED · 2022</span>
+            </div>
+            <a class="pdf-link" href="papers/sequestered_enc.pdf" target="_blank" rel="noopener" aria-label="Open the Sequestered Encryption PDF">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V7h3.5L13 3.5zM7.5 12.5h9V14h-9v-1.5zm0 3h9V17h-9v-1.5zm0-6h4V11h-4V9.5z"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="proj-summary">Keeping data private even when the software is compromised: a small trusted hardware unit computes directly on encrypted data and never lets the plaintext leave it, so attackers who break the software still can't read your secrets — at near-normal speed.</p>
+          <div class="proj-actions">
+            <button class="abstract-btn" type="button">Abstract</button>
+          </div>
+          <div class="abstract-src" hidden>
+            <h4>Sequestered Encryption: A Hardware Technique for Comprehensive Data Privacy</h4>
+            <p>Data breaches that penetrate web-facing servers and exfiltrate sensitive user data have become pervasive. Insulating these systems from attack is seemingly impossible due to the ubiquity of software vulnerabilities within cloud applications. It is simply insurmountable to adequately address all such vulnerabilities, and therefore imprudent to rely on software applications to protect user data. Rather, the ideal systems solution upholds data confidentiality, even in the presence of vulnerable or compromised software. Homomorphic encryption (HE) provides these capabilities, but its limited expressiveness and significant runtime overheads have inhibited its adoption. In this work, we explore how trusted hardware can be leveraged to provide data confidentiality in the presence of vulnerable software while achieving practical performance overheads. We present Sequestered Encryption (SE)—a hardware technique for data privacy that sequesters sensitive plaintext data into a small hardware root of trust and encrypts this data in all external microarchitectural structures, thereby rendering secret values inaccessible to software. With optimizations, SE achieves &lt;2.5× performance slowdowns on average compared to native execution, demonstrating that architectural approaches can emerge as data privacy solutions that possess zero trust in software while being dynamic, expressive, and performant.</p>
+          </div>
+        </article>
+
+        <!-- VIP-Bench -->
+        <article class="card project-card">
+          <div class="proj-head">
+            <div>
+              <h3>VIP-Bench</h3>
+              <span class="proj-venue">IEEE SEED · 2021</span>
+            </div>
+            <a class="pdf-link" href="papers/vib_bench.pdf" target="_blank" rel="noopener" aria-label="Open the VIP-Bench PDF">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V7h3.5L13 3.5zM7.5 12.5h9V14h-9v-1.5zm0 3h9V17h-9v-1.5zm0-6h4V11h-4V9.5z"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="proj-summary">A common yardstick for privacy technology. It's a suite of standardized test programs that lets researchers fairly compare different systems that compute on encrypted data — making it clear which approach is faster or more capable, today and in the future.</p>
+          <div class="proj-actions">
+            <button class="abstract-btn" type="button">Abstract</button>
+          </div>
+          <div class="abstract-src" hidden>
+            <h4>VIP-Bench: A Benchmark Suite for Evaluating Privacy-Enhanced Computation Frameworks</h4>
+            <p>Privacy-enhanced computation enables the processing of encrypted data without exposing underlying sensitive information. Such technologies are extremely promising for the advancement of data privacy, as they remove plaintexts from the attackers' reach. However, each privacy technology provides varying degrees of computational capabilities and performance overheads, creating challenges for adoption. For example, some publicly available homomorphic encryption schemes are limited in expressiveness or cannot support deep computation without incurring significant overheads. This diversity warrants a benchmark suite that can adequately assess capability and performance while supporting a variety of privacy-enhanced software architectures. We propose VIP-Bench, a benchmark suite designed with varying operational complexity and computational depth to evaluate competing privacy frameworks fairly and directly. VIP-Bench defines a forward-looking privacy-enhanced computation model and then develops under that model an array of privacy-focused benchmarks. The benchmark set is designed to flexibly cover the whole range of expected computational power and capability, enabling VIP-Bench to evaluate the privacy-enhanced computation capabilities of both today and tomorrow.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <a class="btn" href="index.html#publications">All publications →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Kidus Workneh · Boulder, CO · <a href="mailto:kidus.workneh@colorado.edu">kidus.workneh@colorado.edu</a></p>
+  </footer>
+
+  <!-- Abstract popup -->
+  <div class="modal" id="abstractModal" hidden>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-label="Paper abstract">
+      <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+      <div class="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="hero-bg.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

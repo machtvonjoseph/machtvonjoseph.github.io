@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hobbies — Kidus Workneh</title>
+  <meta name="description" content="Kidus Workneh's hobbies — climbing, hiking, skiing, and favorite books." />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kidus Workneh</a>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="research.html">Research</a>
+        <a href="blog.html">Blog</a>
+        <a href="hobbies.html" class="active">Hobbies</a>
+        <a href="CV_Resume/KidusCV1_6_26.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.1" y1="5.1" x2="6.9" y2="6.9"/><line x1="17.1" y1="17.1" x2="18.9" y2="18.9"/><line x1="5.1" y1="18.9" x2="6.9" y2="17.1"/><line x1="17.1" y1="6.9" x2="18.9" y2="5.1"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <canvas id="hero-bg" class="hero-bg" aria-hidden="true"></canvas>
+    <div class="page-hero-inner">
+      <h1 class="page-title">Hobbies</h1>
+      <p class="page-sub">Outside of research — climbing, hiking, skiing, and a few favorite books.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section hobby">
+      <h2 class="section-title">Climbing</h2>
+      <p class="hobby-note">On the rock outside</p>
+      <div class="slideshow" data-autoplay="4500">
+      <div class="slides">
+        <img class="slide active" src="Hobbies/Climbing/2A9A5B01-64DA-4602-A4E7-FBAE645F353D_1_105_c.jpeg" alt="Climbing photo" loading="lazy">
+        <img class="slide" src="Hobbies/Climbing/63878FE1-8D94-436E-B9D8-F0F9F3FC7F73_1_102_o.jpeg" alt="Climbing photo" loading="lazy">
+        <img class="slide" src="Hobbies/Climbing/92E28E42-CFF6-4EAC-BF4D-91F9243EC52A_1_102_o.jpeg" alt="Climbing photo" loading="lazy">
+        <img class="slide" src="Hobbies/Climbing/966B814C-8508-485C-BF9B-D0E02D7CC0B0_1_102_o.jpeg" alt="Climbing photo" loading="lazy">
+        <img class="slide" src="Hobbies/Climbing/C605D4E4-374B-4FAC-918F-019F7C2E5CC8_1_102_o.jpeg" alt="Climbing photo" loading="lazy">
+      </div>
+      <button class="slide-nav prev" type="button" aria-label="Previous slide">‹</button>
+      <button class="slide-nav next" type="button" aria-label="Next slide">›</button>
+      <div class="slide-dots"></div>
+    </div>
+    </section>
+
+    <section class="section hobby">
+      <h2 class="section-title">Hiking</h2>
+      <p class="hobby-note">Mountains in Colorado and beyond.</p>
+      <div class="slideshow" data-autoplay="4500">
+      <div class="slides">
+        <img class="slide active" src="Hobbies/Hiking/063AC6C2-8741-4B01-A1D5-661ADD43E425_1_105_c.jpeg" alt="Hiking photo" loading="lazy">
+        <img class="slide" src="Hobbies/Hiking/15090076-F40F-469D-8037-2CAD9941AE8D_1_105_c.jpeg" alt="Hiking photo" loading="lazy">
+        <img class="slide" src="Hobbies/Hiking/197D1342-B199-4E40-9A5F-1D344B7DAA03_1_102_a.jpeg" alt="Hiking photo" loading="lazy">
+        <img class="slide" src="Hobbies/Hiking/47559BB4-A1B4-4A2C-9B77-DB1FDB929354_1_102_a.jpeg" alt="Hiking photo" loading="lazy">
+        <img class="slide" src="Hobbies/Hiking/586AF8A2-FE7C-4B84-8520-C3C02A5CDDAC_1_105_c.jpeg" alt="Hiking photo" loading="lazy">
+        <img class="slide" src="Hobbies/Hiking/736EC5D7-D563-414E-B159-ADF2F3A959BD_1_105_c.jpeg" alt="Hiking photo" loading="lazy">
+        <img class="slide" src="Hobbies/Hiking/75586C56-81C5-4438-B97C-2979A8D44248_1_105_c.jpeg" alt="Hiking photo" loading="lazy">
+      </div>
+      <button class="slide-nav prev" type="button" aria-label="Previous slide">‹</button>
+      <button class="slide-nav next" type="button" aria-label="Next slide">›</button>
+      <div class="slide-dots"></div>
+    </div>
+    </section>
+
+    <section class="section hobby">
+      <h2 class="section-title">Skiing</h2>
+      <p class="hobby-note">Winters in the Rockies.</p>
+      <div class="slideshow" data-autoplay="4500">
+      <div class="slides">
+        <img class="slide active" src="Hobbies/Skiing/34D3589E-2B5C-4F54-A6AE-865085F080CE_1_102_o.jpeg" alt="Skiing photo" loading="lazy">
+        <img class="slide" src="Hobbies/Skiing/7896713A-BB39-4FEF-9CCA-3E7ED7D8286B_1_102_o.jpeg" alt="Skiing photo" loading="lazy">
+        <img class="slide" src="Hobbies/Skiing/A0731E4C-ED3A-49FF-B4DF-7F7191AD0407_1_105_c.jpeg" alt="Skiing photo" loading="lazy">
+      </div>
+      <button class="slide-nav prev" type="button" aria-label="Previous slide">‹</button>
+      <button class="slide-nav next" type="button" aria-label="Next slide">›</button>
+      <div class="slide-dots"></div>
+    </div>
+    </section>
+
+    <section class="section hobby">
+      <h2 class="section-title">Readings</h2>
+      <p class="hobby-note">A few that have stuck with me.</p>
+      <div class="slideshow" data-autoplay="5000">
+      <div class="slides">
+        <img class="slide active" src="Hobbies/Books/brothers-karamazov.jpg" alt="The Brothers Karamazov" data-caption="The Brothers Karamazov · Fyodor Dostoevsky" loading="lazy">
+        <img class="slide" src="Hobbies/Books/thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow" data-caption="Thinking, Fast and Slow · Daniel Kahneman" loading="lazy">
+        <img class="slide" src="Hobbies/Books/heartbreaking-work.jpg" alt="A Heartbreaking Work of Staggering Genius" data-caption="A Heartbreaking Work of Staggering Genius · Dave Eggers" loading="lazy">
+      </div>
+      <button class="slide-nav prev" type="button" aria-label="Previous slide">‹</button>
+      <button class="slide-nav next" type="button" aria-label="Next slide">›</button>
+      <div class="slide-dots"></div>
+      <div class="slide-caption"></div>
+    </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Kidus Workneh · Boulder, CO · <a href="mailto:kidus.workneh@colorado.edu">kidus.workneh@colorado.edu</a></p>
+  </footer>
+
+  <script src="hero-bg.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
